@@ -44,15 +44,14 @@ kotlin {
 }
 
 
- dependencies {
-     testImplementation(kotlin("test"))
-     implementation("org.jetbrains.kotlin-wrappers:kotlin-react-js:18.2.0-pre.710")
-     implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom-js:8.2.0-pre.710")
-     implementation("org.jetbrains.kotlin-wrappers:kotlin-emotion-js:11.11.1-pre.710")
-     implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom-js:6.22.1-pre.710")
-     implementation("org.jetbrains.kotlin-wrappers:kotlin-redux-js:4.1.2-pre.710")
-     implementation("org.jetbrains.kotlin-wrappers:kotlin-react-redux-js:7.2.6-pre.710")
-     implementation("org.jetbrains.kotlin-wrappers:kotlin-popper-js:2.11.8-pre.710")
-     implementation("org.jetbrains.kotlin-wrappers:kotlin-tanstack-virtual-core-js:3.1.3-pre.710")
- }
+dependencies {
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react:18.2.0-pre.385")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:18.2.0-pre.385")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-emotion:11.10.4-pre.385")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:6.3.0-pre.385")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-redux:4.1.2-pre.385")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-redux:7.2.6-pre.385")
+
+//     implementation("org.jetbrains.kotlin-wrappers:kotlin-tanstack-virtual-core-js:3.1.3-pre.710")
+}
 
