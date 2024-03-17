@@ -7,6 +7,7 @@ import react.FC
 import react.Props
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.em
+import react.dom.html.ReactHTML.strong
 
 interface DictionaryEntryAudienceContext {
     var audience: AudienceRecord
@@ -20,7 +21,10 @@ external interface DictionaryEntryProps : Props {
 
 val DictionaryEntry = FC<DictionaryEntryProps> {
     div {
-        +"${it.definition}"
+        strong {
+            +"${it.definition.partOfSpeech}"
+        }
+        +" ${it.definition.definition}"
         it.audienceContexts.map { ac ->
             div {
                 em {
