@@ -5,24 +5,25 @@ import model.ContextRecord
 import model.DefinitionRecord
 import react.FC
 import react.Props
-import react.dom.html.ReactHTML
+import react.dom.html.ReactHTML.div
+import react.dom.html.ReactHTML.em
 
 interface DictionaryEntryAudienceContext {
     var audience: AudienceRecord
     var context: ContextRecord
 }
 
-interface DictionaryEntryProps : Props {
+external interface DictionaryEntryProps : Props {
     var definition: DefinitionRecord
     var audienceContexts: Array<DictionaryEntryAudienceContext>
 }
 
 val DictionaryEntry = FC<DictionaryEntryProps> {
-    ReactHTML.div {
+    div {
         +"${it.definition}"
         it.audienceContexts.map { ac ->
-            ReactHTML.div {
-                ReactHTML.em {
+            div {
+                em {
                     +"[${ac.audience.name} | ${ac.context.name}]"
                 }
             }

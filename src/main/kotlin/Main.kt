@@ -1,5 +1,6 @@
 import components.DictionaryListing
 import kotlinx.browser.document
+import model.TermRecord
 import model.TermRecordRun
 import model.getUsageRecords
 import react.FC
@@ -40,4 +41,3 @@ val CounterComponent = FC<Props> {
         }
     }
 }
-

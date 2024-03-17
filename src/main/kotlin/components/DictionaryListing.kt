@@ -1,24 +1,20 @@
 package components
 
-import model.AudienceRecord
-import model.ContextRecord
-import model.DefinitionRecord
-import model.TermRecord
-import model.UsageRecord
+import model.*
 import react.FC
+import react.Key
 import react.Props
-import react.dom.html.ReactHTML
-import react.*
+import react.dom.html.ReactHTML.div
 
-interface DictionaryListingProps : Props {
+external interface DictionaryListingProps : Props {
     var term: TermRecord
     var usages: Array<UsageRecord>
 }
 
-val DictionaryListing = FC<DictionaryListingProps> {
+val DictionaryListing = FC<DictionaryListingProps> {props ->
     var x: MutableMap<DefinitionRecord, DictionaryEntryProps> = mutableMapOf()
 
-    it.usages.forEach {
+    props.usages.forEach {
         var dep: DictionaryEntryProps? = null
         if (x.containsKey(it.definition)) {
             dep = x.get(it.definition)
@@ -37,8 +33,8 @@ val DictionaryListing = FC<DictionaryListingProps> {
         })
     }
 
-    ReactHTML.div {
-        +"${it.term.term}"
+    div {
+        +"${props.term.term}"
         x.map {
             DictionaryEntry {
                 definition = it.key
