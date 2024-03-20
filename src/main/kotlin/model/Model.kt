@@ -9,7 +9,7 @@ data class AudienceRecord (var name: String)
 
 data class ContextRecord (var name: String)
 // Not all terms should need a specific context, so a general context is available.
-var ContextRecordGeneral = ContextRecord ("General")
+var ContextRecordGeneral = ContextRecord ("general")
 
 data class UsageRecord (
     var term: TermRecord,
